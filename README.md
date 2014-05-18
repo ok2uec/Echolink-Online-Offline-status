@@ -9,23 +9,23 @@ RUN
 --------- 
 should connect to the database
 
-//create instance
-$e = new EcholinkStatus();
+    //create instance
+    $e = new EcholinkStatus();
 
-//add repeaters
-$e->addRepeater("ok0mar");
-$e->addRepeater("ok0bhd");
-$e->addRepeater("ok0uec");
+    //add repeaters
+    $e->addRepeater("ok0mar");
+    $e->addRepeater("ok0bhd");
+    $e->addRepeater("ok0uec");
 
-//run script check from server echolink.org
-$e->check();
+    //run script check from server echolink.org
+    $e->check();
 
 
-// get data after check
-$e->GetRepeater()
+    // get data after check
+    $e->GetRepeater()
 
-//array [..] = array("repeater","status","update","date")
-var_dump($e->GetRepeater());
- 
+    //array [..] = array("repeater","status","update","date")
+    var_dump($e->GetRepeater());
+
  
 
